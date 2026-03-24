@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page One — Life Drawing</title>
+
+<style>
+:root {
+  --main-blue: #d62828;
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--main-blue);
+  font-family: "Futura PT", Futura, Arial, sans-serif;
+  background-image: url("gradient3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: fadeIn 0.8s ease;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10pt;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 80pt;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  line-height: 0.95;
+  animation: titleAppear 0.8s ease;
+}
+
+.page-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.page-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--main-blue);
+  font-size: 10pt;
+  text-transform: uppercase;
+  gap: 6px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-links a:hover {
+  transform: scale(1.05);
+}
+
+.page-links a:active {
+  transform: scale(0.95);
+}
+
+.page-links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--main-blue);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.page-links a:hover::after {
+  width: 100%;
+}
+
+.thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.page-links a:hover .thumb {
+  transform: scale(1.1);
+}
+
+.page-title {
+  font-weight: 600;
+}
+
+.page-desc {
+  font-size: 10pt;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 80pt;
+  margin: 50px 0 20px;
+  text-transform: uppercase;
+  line-height: 0.95;
+  animation: titleAppear 1s ease;
+}
+
+.desc-box {
+  font-size: 12pt;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(3px);
+}
+
+th, td {
+  border: 1px solid var(--main-blue);
+  padding: 12px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 10pt;
+}
+
+th {
+  font-weight: 600;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.55);
+}
+
+td a {
+  color: var(--main-blue);
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--main-blue);
+  color: white;
+  margin-top: 32px;
+}
+
+footer .wrap {
+  font-size: 10pt;
+  text-transform: uppercase;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleAppear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .main-title,
+  .section-title {
+    font-size: 42pt;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .thumb {
+    width: 80px;
+    height: 80px;
+  }
+
+  th, td {
+    font-size: 9pt;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .main-title,
+  .section-title {
+    font-size: 34pt;
+  }
+
+  .page-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .thumb {
+    width: 70px;
+    height: 70px;
+  }
+
+  .page-links a {
+    font-size: 9pt;
+  }
+
+  .desc-box {
+    font-size: 11pt;
+  }
+
+  th, td {
+    font-size: 9pt;
+    padding: 8px;
+    min-width: 140px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <div class="top-bar">
+    <div>Animation</div>
+    <div>Discover</div>
+  </div>
+
+  <h1 class="main-title">Animation</h1>
+  
+  <nav class="page-links">
+    <a href="index.html">
+      <img src="image22.jpg" class="thumb" alt="Home">
+      <div class="page-title">Home</div>
+      <div class="page-desc">Main Page</div>
+    </a>
+
+    <a href="page1.html">
+      <img src="image8.jpg" class="thumb" alt="Life Drawing">
+      <div class="page-title">Page One</div>
+      <div class="page-desc">Life Drawing</div>
+    </a>
+
+    <a href="page2.html">
+      <img src="image7.jpg" class="thumb" alt="Foundation Drawing">
+      <div class="page-title">Page Two</div>
+      <div class="page-desc">Foundation Drawing</div>
+    </a>
+
+    <a href="page3.html">
+      <img src="image6.jpg" class="thumb" alt="Color">
+      <div class="page-title">Page Three</div>
+      <div class="page-desc">Color</div>
+    </a>
+
+    <a href="page4.html">
+      <img src="image5.jpg" class="thumb" alt="Digital Programs">
+      <div class="page-title">Page Four</div>
+      <div class="page-desc">Digital Programs</div>
+    </a>
+  </nav>
+
+  <h2 class="section-title">Life Drawing</h2>
+
+  <div class="desc-box">
+    <p>
+      These links help artists practice life drawing through human figures, animals, and landscapes, offering tools that strengthen observation, proportion, and movement. Learning life drawing is essential because it is the base of art—it trains you to truly see how forms exist in space, how bodies and environments are structured, and how light and weight work in real life.
+    </p>
+    <p>
+      Even stylized or digital work depends on this foundation, making life drawing a key skill for building strong, confident, and expressive artwork.
+    </p>
+  </div>
+
+  <div class="table-wrap">
+    <table aria-label="Life drawing resources">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Link</th>
+          <th>Paid / Free</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>William Nguyen realtime head reference tool</td>
+          <td><a href="https://www.artstation.com/williamnguyen" target="_blank" rel="noopener">artstation.com</a></td>
+          <td>Free</td>
+          <td>3D reference tools for a variety of head models with interactive lighting.</td>
+        </tr>
+
+        <tr>
+          <td>Line of Action</td>
+          <td><a href="https://line-of-action.com/" target="_blank" rel="noopener">line-of-action.com</a></td>
+          <td>Free</td>
+          <td>Free life drawing for figure, animals, hands/feet, faces, landscapes. Forums, 360 views, and workshops.</td>
+        </tr>
+
+        <tr>
+          <td>JustSketchMe</td>
+          <td><a href="https://justsketch.me/?ref=lineofaction" target="_blank" rel="noopener">justsketch.me</a></td>
+          <td>Free</td>
+          <td>Interactive 3D mannequin poser that operates within browser or installation to desktop.</td>
+        </tr>
+
+        <tr>
+          <td>PaintingDemos: Life Drawing Techniques</td>
+          <td><a href="https://paintingdemos.com/life-drawing-techniques-and-methods/" target="_blank" rel="noopener">paintingdemos.com</a></td>
+          <td>Free</td>
+          <td>Life drawing techniques article on PaintingDemos.</td>
+        </tr>
+
+        <tr>
+          <td>Morpho Anatomy Books</td>
+          <td><a href="https://www.amazon.com/s?i=stripbooks&rh=" target="_blank" rel="noopener">amazon.com</a></td>
+          <td>Paid</td>
+          <td>Straight-to-the-point, affordable, excellent books on various aspects of anatomy by Michael Lauricella.</td>
+        </tr>
+
+        <tr>
+          <td>PoseSpace</td>
+          <td><a href="https://www.amazon.com/s?i=stripbooks&rh=" target="_blank" rel="noopener">amazon.com</a></td>
+          <td>Mix</td>
+          <td>Life Drawing tool that has Paid/Free options. Paid will give you higher resolution photos.</td>
+        </tr>
+
+        <tr>
+          <td>AdorkaStock</td>
+          <td><a href="https://www.adorkastock.com/" target="_blank" rel="noopener">adorkastock.com</a></td>
+          <td>Mix</td>
+          <td>Life Drawing gallery with Paid/Free options. Consistent high quality updates with general-niche pose libraries.</td>
+        </tr>
+
+        <tr>
+          <td>Gesture Drawing Collection by Megan Rika Young</td>
+          <td><a href="https://ko-fi.com/s/6c2b71d33f" target="_blank" rel="noopener">ko-fi.com</a></td>
+          <td>Free</td>
+          <td>45 page collection of Figure Drawings by Megan Rika Young.</td>
+        </tr>
+
+        <tr>
+          <td>Figure Drawing Mentorship Notes by DianaTS</td>
+          <td><a href="https://twitter.com/daitsaisan/status/1360369176007897090?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Fkashcash.notion.site%2FTwitter-Tutorials-References-d202e6c0a9c14e6f81d06136387895fc" target="_blank" rel="noopener">twitter.com</a></td>
+          <td>Free</td>
+          <td>Super helpful figure drawing Twitter thread.</td>
+        </tr>
+
+        <tr>
+          <td>Andrew Loomis Figure Drawing Books</td>
+          <td><a href="http://www.alexhays.com/loomis/" target="_blank" rel="noopener">alexhays.com</a></td>
+          <td>Free</td>
+          <td>PDF Andrew Loomis books. Can be downloaded individually or as a full collection.</td>
+        </tr>
+
+        <tr>
+          <td>Anatomy Photo Share by Hyunsuk Lee</td>
+          <td><a href="https://photos.google.com/share/AF1QipMbaSTp0BlK1kBCKVvfZzyDhcgCZQuaDBbp8v8Lj6hxnBaNh7YWoKwCPCYr-10--A?pli=1&key=cU5OaV9TVWhoMWlVZERnaEc2YVFKQTJHbnVDeWR3" target="_blank" rel="noopener">photos.google.com</a></td>
+          <td>Free</td>
+          <td>Large resource of anatomy refs and guides, both photos and animated videos to show musculature and movement.</td>
+        </tr>
+
+        <tr>
+          <td>Quickposes</td>
+          <td><a href="https://quickposes.com/en" target="_blank" rel="noopener">quickposes.com</a></td>
+          <td>Free</td>
+          <td>Life Drawing with timed practice.</td>
+        </tr>
+
+        <tr>
+          <td>MagicPoser</td>
+          <td><a href="https://magicposer.com/" target="_blank" rel="noopener">magicposer.com</a></td>
+          <td>Mix</td>
+          <td>3D character poser. Mostly free, some paid features.</td>
+        </tr>
+
+        <tr>
+          <td>DesignDoll</td>
+          <td><a href="https://terawell.net/index.php" target="_blank" rel="noopener">terawell.net</a></td>
+          <td>Mix</td>
+          <td>3D character and perspective poser. Free and paid options available.</td>
+        </tr>
+
+        <tr>
+          <td>Clothing on Figure photo reference Pinterest</td>
+          <td><a href="https://www.pinterest.com/saraalfageeh/pose" target="_blank" rel="noopener">pinterest.com</a></td>
+          <td>Free</td>
+          <td>Collection of different clothing styles on a range of body types and ages.</td>
+        </tr>
+
+        <tr>
+          <td>Hairfinder</td>
+          <td><a href="https://www.hairfinder.com/" target="_blank" rel="noopener">hairfinder.com</a></td>
+          <td>Free</td>
+          <td>Free library for hairstyles, references, and haircare. Good for varying hair design.</td>
+        </tr>
+
+        <tr>
+          <td>Warren Photographic</td>
+          <td><a href="https://www.warrenphotographic.co.uk/index.php" target="_blank" rel="noopener">warrenphotographic.co.uk</a></td>
+          <td>Free</td>
+          <td>Huge library with tons of animal varieties.</td>
+        </tr>
+
+        <tr>
+          <td>Animal/Human Skull Reference Module</td>
+          <td><a href="https://x6ud.github.io/#/" target="_blank" rel="noopener">x6ud.github.io</a></td>
+          <td>Free</td>
+          <td>3D models reference for animal and human skulls with an interactive angle finder.</td>
+        </tr>
+
+        <tr>
+          <td>Animal Wing Guide</td>
+          <td><a href="https://twitter.com/Tazz_Bluebird/status/1267186331698028547" target="_blank" rel="noopener">twitter.com</a></td>
+          <td>Free</td>
+          <td>Wing drawing guide.</td>
+        </tr>
+
+        <tr>
+          <td>Map Crunch</td>
+          <td><a href="https://www.mapcrunch.com/" target="_blank" rel="noopener">mapcrunch.com</a></td>
+          <td>Free</td>
+          <td>Interactive in-browser module of 360 degree landscape photos.</td>
+        </tr>
+
+        <tr>
+          <td>How to Study Art: Plein Air</td>
+          <td><a href="https://www.youtube.com/watch?v=5ja3OAS-" target="_blank" rel="noopener">youtube.com</a></td>
+          <td>Free</td>
+          <td>45-minute workshop by J. Torres on plein air landscape painting.</td>
+        </tr>
+
+        <tr>
+          <td>Draw This</td>
+          <td><a href="https://www.youtube.com/channel/UCOVNvkn-f6BW18AvplWI8YA" target="_blank" rel="noopener">youtube.com</a></td>
+          <td>Free</td>
+          <td>Life drawing YouTube channel with costumed models and SFW references.</td>
+        </tr>
+
+        <tr>
+          <td>Digital Gesture Drawing with Norm</td>
+          <td><a href="https://www.youtube.com/watch?v=8IA5wecLs98" target="_blank" rel="noopener">youtube.com</a></td>
+          <td>Free</td>
+          <td>1-hour workshop going through digital gesture drawing in Procreate.</td>
+        </tr>
+
+        <tr>
+          <td>Ges Draw Party</td>
+          <td><a href="https://www.youtube.com/c/GESDRAWPART" target="_blank" rel="noopener">youtube.com</a></td>
+          <td>Free</td>
+          <td>Unique costumed models for gesture drawing. Great for fun poses and clothing studies.</td>
+        </tr>
+
+        <tr>
+          <td>Hong Ly's Character Design References</td>
+          <td><a href="https://www.characterdesigns.com/" target="_blank" rel="noopener">characterdesigns.com</a></td>
+          <td>Free</td>
+          <td>Tons of character references for animation, games, 2D, 3D, and live action.</td>
+        </tr>
+
+        <tr>
+          <td>Bodies in Motion</td>
+          <td><a href="https://www.characterdesigns.com/" target="_blank" rel="noopener">characterdesigns.com</a></td>
+          <td>Paid</td>
+          <td>Mostly paid subscription but has some free options. Figure drawing focused on motion.</td>
+        </tr>
+
+        <tr>
+          <td>Drawing Compositions</td>
+          <td><a href="https://twitter.com/MitchLeeuwe/status/17787" target="_blank" rel="noopener">twitter.com</a></td>
+          <td>Free</td>
+          <td>Introduction to composition.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Maria Huerta — Animation Website</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Four — Digital Programs</title>
+
+<style>
+:root {
+  --main-blue: #ff4fa3;
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--main-blue);
+  font-family: "Futura PT", Futura, Arial, sans-serif;
+  background-image: url("gradient6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10pt;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: 80pt;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.page-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.page-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--main-blue);
+  font-size: 10pt;
+  text-transform: uppercase;
+  gap: 6px;
+}
+
+.thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.page-title {
+  font-weight: 600;
+}
+
+.page-desc {
+  font-size: 10pt;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 80pt;
+  margin: 50px 0 20px;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.desc-box {
+  font-size: 12pt;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(3px);
+  margin-bottom: 32px;
+}
+
+th, td {
+  border: 1px solid var(--main-blue);
+  padding: 12px;
+  vertical-align: top;
+  text-align: left;
+  font-size: 10pt;
+}
+
+th {
+  font-weight: 600;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.55);
+}
+
+td a {
+  color: var(--main-blue);
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+.subsection-title {
+  font-size: 28pt;
+  margin: 40px 0 16px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+footer {
+  background: var(--main-blue);
+  color: white;
+  margin-top: 32px;
+}
+
+footer .wrap {
+  font-size: 10pt;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .main-title,
+  .section-title {
+    font-size: 42pt;
+  }
+
+  .subsection-title {
+    font-size: 22pt;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .thumb {
+    width: 80px;
+    height: 80px;
+  }
+
+  th, td {
+    font-size: 9pt;
+    padding: 8px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <div class="top-bar">
+    <div>Animation</div>
+    <div>Discover</div>
+  </div>
+
+  <h1 class="main-title">Animation</h1>
+
+  <nav class="page-links">
+    <a href="index.html">
+      <img src="image4.png" class="thumb" alt="Home">
+      <div class="page-title">Home</div>
+      <div class="page-desc">Main Page</div>
+    </a>
+
+    <a href="page1.html">
+      <img src="image16.jpg" class="thumb" alt="Life Drawing">
+      <div class="page-title">Page One</div>
+      <div class="page-desc">Life Drawing</div>
+    </a>
+
+    <a href="page2.html">
+      <img src="image15.jpg" class="thumb" alt="Foundation Drawing">
+      <div class="page-title">Page Two</div>
+      <div class="page-desc">Foundation Drawing</div>
+    </a>
+
+    <a href="page3.html">
+      <img src="image14.jpg" class="thumb" alt="Color">
+      <div class="page-title">Page Three</div>
+      <div class="page-desc">Color</div>
+    </a>
+
+    <a href="page4.html">
+      <img src="image13.jpg" class="thumb" alt="Digital Programs">
+      <div class="page-title">Page Four</div>
+      <div class="page-desc">Digital Programs</div>
+    </a>
+  </nav>
+
+  <h2 class="section-title">Digital Programs</h2>
+
+  <div class="desc-box">
+    <p>
+      These resources focus on digital art programs, tools, and plugins that can support drawing, painting, and animation workflows. They include both free and paid software options for different types of artists and devices.
+    </p>
+    <p>
+      Learning digital programs is important because they help artists explore different workflows, practice more efficiently, and build technical skills that support both personal and professional projects.
+    </p>
+  </div>
+
+  <h3 class="subsection-title">Digital Programs</h3>
+
+  <table aria-label="Digital programs resources">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Links</th>
+        <th>Paid / Free</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Fire Alpaca</td>
+        <td><a href="https://firealpaca.com/" target="_blank" rel="noopener">firealpaca.com</a></td>
+        <td>Free</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Krita</td>
+        <td><a href="https://krita.org/en/" target="_blank" rel="noopener">krita.org</a></td>
+        <td>Free</td>
+        <td>My favorite alternative to Adobe Flash (aka Adobe Animate).</td>
+      </tr>
+
+      <tr>
+        <td>Procreate</td>
+        <td><a href="https://procreate.art/" target="_blank" rel="noopener">procreate.art</a></td>
+        <td>Paid</td>
+        <td>iOS. $9.99 USD.</td>
+      </tr>
+
+      <tr>
+        <td>Clip Studio Paint</td>
+        <td><a href="https://www.clipstudio.net/en/" target="_blank" rel="noopener">clipstudio.net</a></td>
+        <td>Paid</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Paint Tool Sai</td>
+        <td><a href="https://www.systemax.jp/en/sai/" target="_blank" rel="noopener">systemax.jp</a></td>
+        <td>Paid</td>
+        <td>Free trial for 1 month, then need to pay for license.</td>
+      </tr>
+
+      <tr>
+        <td>GestureSesh</td>
+        <td><a href="https://github.com/adnv3k/GestureSesh" target="_blank" rel="noopener">github.com</a></td>
+        <td>Free</td>
+        <td>Free alternative to GestureDrawing on ArtStation. Allows references on your computer to be set to user-defined timing.</td>
+      </tr>
+
+      <tr>
+        <td>HeavyPaint</td>
+        <td><a href="https://www.heavypaint.com/" target="_blank" rel="noopener">heavypaint.com</a></td>
+        <td>Free</td>
+        <td>Helps with limitations in color palettes and stroke mileage. Good for exploration.</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <h3 class="subsection-title">Program-Related</h3>
+
+  <table aria-label="Program related resources">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Links</th>
+        <th>Paid / Free</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Lineart on Sketch Layer Fix</td>
+        <td><a href="https://twitter.com/pastelstarstuff/status/1395212589844553729?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Fkashcash.notion.site%2FTwitter-Tutorials-References-d202e6c0a9c14e6f81d06136387895fc" target="_blank" rel="noopener">twitter.com</a></td>
+        <td>Free</td>
+        <td>Mini tutorial on merging lineart and sketch layer if you did an oopsie. By pastelstarstuff.</td>
+      </tr>
+
+      <tr>
+        <td>Blending Mode Coloring Tip</td>
+        <td><a href="https://twitter.com/JoJoWentBananas/status/1390655171286470658?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Fkashcash.notion.site%2FTwitter-Tutorials-References-d202e6c0a9c14e6f81d06136387895fc" target="_blank" rel="noopener">twitter.com</a></td>
+        <td>Free</td>
+        <td>Fun blending mode coloring tip. By JoJoWentBananas.</td>
+      </tr>
+
+      <tr>
+        <td>Clip Studio Paint Shortcuts Streamlining Tutorial</td>
+        <td><a href="https://twitter.com/RipleyLacross/status/1369860059174346752?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed&ref_url=https%3A%2F%2Fkashcash.notion.site%2FTwitter-Tutorials-References-d202e6c0a9c14e6f81d06136387895fc" target="_blank" rel="noopener">twitter.com</a></td>
+        <td>Free</td>
+        <td>Streamlining your shortcuts in Clip Studio Paint for a faster workflow, 3 tweet thread. By RipleyLacross.</td>
+      </tr>
+
+      <tr>
+        <td>Coolorus Color Wheel</td>
+        <td><a href="https://coolorus.com/" target="_blank" rel="noopener">coolorus.com</a></td>
+        <td>Paid</td>
+        <td>Color wheel plugin for Adobe Photoshop. $16.99 USD.</td>
+      </tr>
+
+      <tr>
+        <td>BrushBox</td>
+        <td><a href="https://derrickbarth.gumroad.com/l/brushbox" target="_blank" rel="noopener">gumroad.com</a></td>
+        <td>Paid</td>
+        <td>Preset Manager plugin for Adobe Photoshop. $15 USD.</td>
+      </tr>
+
+      <tr>
+        <td>AD Brutus Symmetry</td>
+        <td><a href="http://alexdukal.com/store/downloads/ad-brutus-symmetry/?nocache=true" target="_blank" rel="noopener">alexdukal.com</a></td>
+        <td>Paid</td>
+        <td>Real-time symmetry tool plugin for Adobe Photoshop (2017+ CC). $10 USD.</td>
+      </tr>
+
+      <tr>
+        <td>Lazy Nezumi</td>
+        <td><a href="https://lazynezumi.com/" target="_blank" rel="noopener">lazynezumi.com</a></td>
+        <td>Paid</td>
+        <td>Stabilizer for Windows PC. Free tutorial for 15 days and then pay $32 USD.</td>
+      </tr>
+
+      <tr>
+        <td>Registering Materials in CSP</td>
+        <td><a href="https://twitter.com/explodikid/status/1391478594891776001" target="_blank" rel="noopener">twitter.com</a></td>
+        <td>Free</td>
+        <td>Thread by explodikid.</td>
+      </tr>
+
+      <tr>
+        <td>CSP - Perspective 3D Model Drawing</td>
+        <td><a href="https://www.youtube.com/watch?v=xGu76D_O3Qo&ab_channel=KendrysDraws" target="_blank" rel="noopener">youtube.com</a></td>
+        <td>Free</td>
+        <td>Tutorial on how to snap perspective grid to 3D pose in CSP and make it color pink.</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Maria Huerta — Animation Website</p>
+  </div>
+</footer>
+
+</body>
+</html>
